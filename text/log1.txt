@@ -1,0 +1,51 @@
+========================= START 2024-10-04 20:50:30=========================
+pisogen.dll module handler is set.
+Created class instance: PersonalIsogen
+All method interceptors for IPersonalIsogen released!
+All method interceptors for IPersonalIsogen added successfully!
+Called put_RootDirectory() with argument: 1B7A4E0C, result: 0
+Called put_Project() with argument: 1B9EE39C, result: 0
+Called put_Style() with argument: 1B9EE1E4, result: 0
+Called put_DimensionUnits() with argument: 3, result: 0
+Called put_WeightUnits() with argument: 48, result: 0
+Called put_DrawingFormat() with argument: 116, result: 0
+Called put_Viewpoint() with argument: 204, result: 0
+Called put_Tolerance() with argument: 0, result: 0
+Called put_MessageLevel() with argument: 300, result: 0
+Called put_DemoMode() with argument: 0, result: 0
+Called put_KeepPOD() with argument: -1, result: 0
+pigenSetIsogenTimeout() with timeout: 900, result: 900
+Called put_IsogenTimeout() with argument: 900, result: 0
+Called put_InputName() with argument: 1B7AF4C4, result: 0
+AliasTime()
+_AliasTmStdcall() with day: 4, month: 10, year: 124, hour: 20, minute: 50, result: 41023845712287002
+Called GetHandshakeTime() with arguments: 4-10-124 20:50 (SecondsCount = 1728075034), result: 0
+Called put_Handshake() with argument: 1B4F5364, result: 0
+AliasTime()
+AliasTm() result: 1728075034
+AliasTime()
+AliasTm() result: 1728075034
+AliasTime()
+AliasTm() result: 1728075034
+AliasTime()
+AliasTm() result: 1728075035
+AliasTime()
+AliasTm() result: 1728075035
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+AliasTime()
+Created class instance: OutputFiles
+Created class instance: OutputFile
+Created class instance: OutputFile
+Created class instance: OutputFile
+Created class instance: OutputFile
+Called Execute() with arguments: pVal = 0, result: 0
+Called get_OutputFiles(), result: 0
+Called get_OutputFiles(), result: 0
+AliasTime()
