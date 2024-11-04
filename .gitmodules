@@ -1,0 +1,6 @@
+[submodule "DLL-Injector"]
+	path = DLL-Injector
+	url = https://github.com/adamhlt/DLL-Injector
+[submodule "Detours"]
+	path = Detours
+	url = https://github.com/microsoft/Detours
