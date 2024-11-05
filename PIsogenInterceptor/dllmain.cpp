@@ -1,4 +1,4 @@
-﻿#include <windows.h>
+#include <windows.h>
 #include <detours.h>
 #include <fstream>
 #include <chrono>
@@ -226,19 +226,22 @@ int __stdcall _pisogenStdcall(int a1, char* Source, char* a3, char* a4) {
 // Methods wrappers
 HRESULT STDMETHODCALLTYPE put_RootDirectory(IPersonalIsogen* pThis, BSTR rhs) {
     HRESULT result = originalPutRootDirectory(pThis, rhs);
-    std::cout << "Called put_RootDirectory() with argument: " << rhs << ", result: " << result << '\n';
+	const std::string stdstr(_bstr_t(rhs, true));
+    std::cout << "Called put_RootDirectory() with argument: " << stdstr << ", result: " << result << '\n';
     return result;
 }
 
 HRESULT STDMETHODCALLTYPE put_Project(IPersonalIsogen* pThis, BSTR rhs) {
     HRESULT result = originalPutProject(pThis, rhs);
-    std::cout << "Called put_Project() with argument: " << rhs << ", result: " << result << '\n';
+	const std::string stdstr(_bstr_t(rhs, true));
+    std::cout << "Called put_Project() with argument: " << stdstr << ", result: " << result << '\n';
     return result;
 }
 
 HRESULT STDMETHODCALLTYPE put_Style(IPersonalIsogen* pThis, BSTR rhs) {
     HRESULT result = originalPutStyle(pThis, rhs);
-    std::cout << "Called put_Style() with argument: " << rhs << ", result: " << result << '\n';
+	const std::string stdstr(_bstr_t(rhs, true));
+    std::cout << "Called put_Style() with argument: " << stdstr << ", result: " << result << '\n';
     return result;
 }
 
@@ -310,7 +313,8 @@ HRESULT STDMETHODCALLTYPE get_OutputFiles(IPersonalIsogen* pThis, IOutputFiles**
 
 HRESULT STDMETHODCALLTYPE put_InputName(IPersonalIsogen* pThis, BSTR rhs) {
     HRESULT result = originalPutInputName(pThis, rhs);
-    std::cout << "Called put_InputName() with argument: " << rhs << ", result: " << result << '\n';
+	const std::string stdstr(_bstr_t(rhs, true));
+    std::cout << "Called put_InputName() with argument: " << stdstr << ", result: " << result << '\n';
     return result;
 }
 
@@ -322,13 +326,15 @@ HRESULT STDMETHODCALLTYPE GetHandshakeTime(IPersonalIsogen* pThis, long* lDay, l
 
 HRESULT STDMETHODCALLTYPE put_Handshake(IPersonalIsogen* pThis, BSTR rhs) {
     HRESULT result = originalPutHandshake(pThis, rhs);
-    std::cout << "Called put_Handshake() with argument: " << rhs << ", result: " << result << '\n';
+	const std::string stdstr(_bstr_t(rhs, true));
+    std::cout << "Called put_Handshake() with argument: " << stdstr << ", result: " << result << '\n';
     return result;
 }
 
 HRESULT STDMETHODCALLTYPE get_ErrorText(IPersonalIsogen* pThis, BSTR* pVal) {
     HRESULT result = originalGetErrorText(pThis, pVal);
-    std::cout << "Called get_ErrorText(), result: " << result << '\n';
+	const std::string stdstr(_bstr_t(*pVal, true));
+    std::cout << "Called get_ErrorText(), with argument: " << stdstr << " result: " << result << '\n';
     return result;
 }
 
@@ -346,7 +352,8 @@ HRESULT STDMETHODCALLTYPE put_IsogenTimeout(IPersonalIsogen* pThis, long rhs) {
 
 HRESULT STDMETHODCALLTYPE get_Version(IPersonalIsogen* pThis, BSTR* pVal) {
     HRESULT result = originalGetVersion(pThis, pVal);
-    std::cout << "Called get_Version(), result: " << result << '\n';
+	const std::string stdstr(_bstr_t(*pVal, true));
+    std::cout << "Called get_Version(), with argument: " << stdstr << " result: " << result << '\n';
     return result;
 }
 
